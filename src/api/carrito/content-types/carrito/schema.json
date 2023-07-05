@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "carritos",
+  "info": {
+    "singularName": "carrito",
+    "pluralName": "carritos",
+    "displayName": "carrito",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "products": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product.product",
+      "mappedBy": "carrito"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "carrito"
+    }
+  }
+}
